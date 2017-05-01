@@ -16,7 +16,6 @@
 
 package com.example.android.testing.espresso.BasicSample;
 
-import com.google.common.base.Strings;
 
 import android.app.Activity;
 import android.content.Context;
@@ -40,7 +39,7 @@ public class ShowTextActivity extends Activity {
 
         // Get the message from the Intent.
         Intent intent = getIntent();
-        String message = Strings.nullToEmpty(intent.getStringExtra(KEY_EXTRA_MESSAGE));
+        String message = intent.getStringExtra(KEY_EXTRA_MESSAGE);
 
         // Show message.
         ((TextView)findViewById(R.id.show_text_view)).setText(message);
